@@ -1,0 +1,280 @@
+/* CSS for the Enhanced CBM Dashboard */
+/* This stylesheet provides additional styling for the improved dashboard */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --info-color: #3498db;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --transition-speed: 0.3s;
+}
+
+/* Equipment Hierarchy Tree View */
+.hierarchy-tree {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.hierarchy-tree ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.hierarchy-tree li {
+    margin: 5px 0;
+    position: relative;
+}
+
+.tree-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.tree-item:hover {
+    background-color: var(--light-color);
+}
+
+.tree-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tree-toggle {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    cursor: pointer;
+}
+
+.tree-item.active .tree-toggle {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Parameter Selection Panel */
+.parameter-panel {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.parameter-categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.parameter-category {
+    padding: 8px 15px;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.parameter-category:hover {
+    background-color: #d6dbdf;
+}
+
+.parameter-category.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.parameter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.parameter-item {
+    padding: 8px 10px;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.parameter-item:hover {
+    background-color: #d6dbdf;
+}
+
+.parameter-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Dashboard Tabs */
+.dashboard-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all var(--transition-speed) ease;
+}
+
+.tab:hover {
+    background-color: var(--light-color);
+}
+
+.tab.active {
+    border-bottom-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Alert Badges */
+.alert-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.alert-badge.success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.alert-badge.warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.alert-badge.danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.alert-badge.info {
+    background-color: var(--info-color);
+    color: white;
+}
+
+/* Threshold Indicators */
+.threshold-indicator {
+    position: relative;
+    height: 5px;
+    background-color: #eee;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+.threshold-bar {
+    position: absolute;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.threshold-marker {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    top: -2.5px;
+    background-color: var(--dark-color);
+}
+
+.threshold-label {
+    position: absolute;
+    font-size: 0.7rem;
+    top: -20px;
+    transform: translateX(-50%);
+}
+
+/* Data Quality Indicator */
+.data-quality {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quality-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.quality-high {
+    background-color: var(--success-color);
+}
+
+.quality-medium {
+    background-color: var(--warning-color);
+}
+
+.quality-low {
+    background-color: var(--danger-color);
+}
+
+.quality-text {
+    font-size: 0.9rem;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 992px) {
+    .parameter-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .parameter-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-tabs {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    
+    .tab {
+        border-left: 3px solid transparent;
+        border-bottom: none;
+    }
+    
+    .tab.active {
+        border-left-color: var(--primary-color);
+        border-bottom: none;
+    }
+}
