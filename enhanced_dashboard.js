@@ -143,13 +143,18 @@ class EnhancedCBMDashboard {
             }
             
             // If no cached data, load from sample files
-            const files = [
-                '/home/ubuntu/extracted/CD ULSAN CBM.xls',
-                '/home/ubuntu/extracted/H GAETA CBM.xls'
-            ];
+            // const files = [
+            //     '/home/ubuntu/extracted/CD ULSAN CBM.xls',
+            //     '/home/ubuntu/extracted/H GAETA CBM.xls'
+            // ];
             
             // Process files in parallel using Promise.all
-            await this.processFiles(files);
+            // await this.processFiles(files);
+
+            // Simulate loading data directly
+            const simulatedUlsanData = await this.simulateFileLoading('CD ULSAN CBM.xls', 'CD ULSAN');
+            const simulatedGaetaData = await this.simulateFileLoading('H GAETA CBM.xls', 'H GAETA');
+            this.state.data = [...simulatedUlsanData, ...simulatedGaetaData];
             
             // Cache the processed data
             localStorage.setItem('cbm_dashboard_data', JSON.stringify(this.state.data));

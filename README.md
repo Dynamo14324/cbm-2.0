@@ -86,3 +86,40 @@ For any inquiries, suggestions, or support, please open an issue in this reposit
 Project Link: [https://github.com/Dynamo14324/cbm-2.0](https://github.com/Dynamo14324/cbm-2.0)
 
 
+
+
+## 💡 Usage Scenarios & Impact
+
+This enhanced CBM dashboard can significantly benefit:
+
+*   **Maritime Operations**: Proactive monitoring of ship engines, navigation systems, and other critical equipment to prevent failures and optimize maintenance schedules.
+*   **Industrial Facilities**: Real-time condition monitoring of machinery in manufacturing plants, power stations, and other industrial environments.
+*   **Data Analysts & Engineers**: Provides a powerful tool for visualizing complex sensor data, identifying anomalies, and deriving actionable insights.
+*   **Maintenance Teams**: Enables efficient planning and execution of maintenance tasks based on actual equipment condition rather than fixed schedules.
+
+## 🛣️ Future Roadmap & Recommendations
+
+Based on our analysis and prototype, we recommend the following for future development:
+
+*   **Backend Integration**: Develop a robust backend for real-time data ingestion, processing, and storage, moving beyond local data files.
+*   **Predictive Analytics**: Implement advanced machine learning models for predicting equipment failures and remaining useful life (RUL).
+*   **Alerting & Notifications**: Integrate threshold-based alerting and notification systems for critical equipment parameters.
+*   **User Management & Roles**: Implement user authentication and role-based access control for secure data access.
+*   **Mobile Responsiveness**: Further optimize the dashboard for seamless use on mobile devices.
+*   **Integration with ERP/CMMS**: Connect with existing Enterprise Resource Planning or Computerized Maintenance Management Systems for end-to-end workflow automation.
+
+## 🤝 Contributing
+
+We welcome contributions from the community to further enhance this project. Please refer to our [`CONTRIBUTING.md`](CONTRIBUTING.md) for detailed guidelines on how to get involved.
+
+## 📄 License
+
+This project is open-sourced under the **MIT License**. See the `LICENSE` file for more details.
+
+## 📞 Contact
+
+For any inquiries, suggestions, or support, please open an issue in this repository. We appreciate your feedback!
+
+Project Link: [https://github.com/Dynamo14324/cbm-2.0](https://github.com/Dynamo14324/cbm-2.0)
+
+
